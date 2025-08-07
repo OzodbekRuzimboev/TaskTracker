@@ -15,6 +15,8 @@ namespace TaskTracker.Models
         public Priority Priority { get; set; }
         public bool IsCompleted { get; set; }
 
+        public TaskItem() { }
+
         public TaskItem(string description, DateTime dueDate, Priority priority, bool isCompleted = false)
         {
             Description = description;
@@ -25,8 +27,8 @@ namespace TaskTracker.Models
 
         public override string ToString()
         {
-            return $"{Description}\nДата: {DueDate}\nВажность: {Priority}\n" +
-                $"Состояние: {(IsCompleted ? "выполнено" : "не выполнено")}";
+            return $"{Description}\n   Дата: {DueDate:dd.MM.yyyy}\n   Важность: {Priority}\n" +
+                $"   Состояние: {(IsCompleted ? "выполнено" : "не выполнено")}";
         }
     }
 }
