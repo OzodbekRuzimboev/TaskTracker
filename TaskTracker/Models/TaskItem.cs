@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace TaskTracker.Models
+{
+    public enum Priority
+    {
+        Low,
+        Medium,
+        High
+    }
+    public class TaskItem
+    {
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public Priority Priority { get; set; }
+        public bool IsCompleted { get; set; }
+
+        public TaskItem(string description, DateTime dueDate, Priority priority, bool isCompleted = false)
+        {
+            Description = description;
+            DueDate = dueDate;
+            Priority = priority;
+            IsCompleted = isCompleted;
+        }
+
+        public override string ToString()
+        {
+            return $"{Description}\nДата: {DueDate}\nВажность: {Priority}\n" +
+                $"Состояние: {(IsCompleted ? "выполнено" : "не выполнено")}";
+        }
+    }
+}
