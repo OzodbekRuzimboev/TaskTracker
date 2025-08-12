@@ -10,6 +10,7 @@ namespace TaskTracker.Models
     }
     public class TaskItem
     {
+        public Guid Id { get; set; }
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
         public Priority Priority { get; set; }
@@ -19,6 +20,7 @@ namespace TaskTracker.Models
 
         public TaskItem(string description, DateTime dueDate, Priority priority, bool isCompleted = false)
         {
+            Id = Guid.NewGuid();
             Description = description;
             DueDate = dueDate;
             Priority = priority;

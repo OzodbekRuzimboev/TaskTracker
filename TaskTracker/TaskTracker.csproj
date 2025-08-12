@@ -74,9 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FilterCriteria.cs" />
     <Compile Include="Models\TaskItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FilterService.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="TaskRepository.cs" />
   </ItemGroup>
